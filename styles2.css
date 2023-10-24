@@ -1,0 +1,392 @@
+:root {
+    --black: #000;
+    --grey: #121212;
+    --light-grey: #232323;
+    --white: #fff;
+  }
+  body,
+  html {
+    height: 100%;
+    margin: 0rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  a {
+    color: var(--white);
+    text-decoration: none;
+  }
+  
+  .container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    background-color: var(--black);
+    padding: 0.5rem;
+    width: 100%;
+  }
+  
+  .sidebar {
+    flex: 0.25;
+    overflow-y: auto;
+  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0.5rem;
+  }
+  
+  .top-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--grey);
+    border-radius: 0.5rem;
+  }
+  
+  .sidebar .logo img {
+    width: 75px;
+  }
+  
+  .link-flex {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    opacity: 0.7;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .link-flex:hover {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  
+  .link-flex img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .link-flex p {
+    font-size: 1rem;
+    color: var(--white);
+  }
+  
+  .library {
+    border-radius: 0.5rem;
+    flex: 3;
+    overflow-y: auto;
+    background-color: var(--grey);
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .flex-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .flex-top img {
+    height: 1rem;
+    width: 1rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+  }
+  
+  /* Style for the card container */
+  .card-container {
+    display: flex;
+    flex-direction: column; /* Arrange cards in a column layout */
+    gap: 20px;
+    overflow-y: auto; /* Enable vertical scrolling when needed */
+    padding: 10px;
+    border-top: 15px solid #121212;
+    max-height: 100px; /* Set a maximum height to trigger scrolling */
+    overflow-x: hidden;
+  }
+  
+  /* Style for individual cards */
+  .card {
+    width: 200px;
+    background-color: #181818;
+    padding: 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+    /* Add other card styles as needed */
+  }
+  
+  .card h5, h6 {
+    margin: 5px 0;
+  }
+  .card button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  
+  /* Style for the webkit scrollbar */
+  .card-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .card-container::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 0px;
+  }
+  
+  .card-container::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+  
+  .card-container::-webkit-scrollbar-track {
+    background: #252525;
+  }
+  
+  
+  .flex-top p {
+    font-size: 0.7rem;
+    opacity: 0.8;
+  }
+  
+  .flex-top p:hover {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  
+  .flex-top img:hover {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  
+  .button1 button {
+    background-color: #121212;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 1px solid white;
+    border-radius: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 7%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #121212;
+    padding: 0px 0px;
+    position: sticky !important;
+    align-items: center;
+    background-blend-mode: normal;
+  }
+  
+  .topbar .prev-next-buttons button .fa {
+    color: #989898; /* Set the color for the icon */
+    font-size: 10px;
+  }
+  
+  
+  .topbar .prev-next-buttons button {
+    color: #989898;
+    cursor: not-allowed;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    font-size: 18px;
+    border: 0px;
+    background-color: #090909;
+    margin-right: 10px;
+  }
+  
+  .navbar {
+    background-color: rgba(91, 4, 4, 0.8); /* Adjust the alpha value (0.8 in this case) to control transparency */
+    height: 70px;;
+  }
+
+  .navbar .icon {
+    display: none;
+  }
+  
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right !important;
+    padding: 0; /* Remove default padding for the ul element */
+    align-items: end;
+    padding-right: 0;
+    padding-left: 100px;
+    margin-left: 400px;
+  }
+
+  .navbar li {
+    display: inline-block;
+    margin-right: 0px; /* Adjust margin for spacing */
+    align-items: end;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin: 0px 3px;
+    width: 70px;
+    align-items: end;
+    
+  }
+  .navbar ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    align-items: flex-end;
+  }
+  .navbar ul li a:hover,
+  .navbar ul li a:active,
+  .navbar ul li a:focus {
+    color: #ffffff;
+    font-size: 15px;
+  }
+  .navbar ul li.divider {
+    color: #ffffff;
+    font-size: 26px;
+    margin: 0px 20px;
+    width: auto;
+  }
+  .navbar button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  .navbar button:hover,
+  .navbar button:active,
+  .navbar button:focus {
+    background-color: #f2f2f2;
+  }
+  .main-content {
+    flex: 0.8;
+    overflow-y: auto;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
+    border-radius: 0.5rem;
+    padding-bottom: 6rem;
+    
+  }
+  
+  
+  
+  .navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+    align-items: center;
+    background-color: var(--grey);
+    z-index: 1000;
+    /* Other styles as needed */
+  }
+  
+  
+  .spotify-playlists hr {
+    margin: 70px 0px 0px;
+    border-color: #636363;
+  }
+  
+  .span1 {
+    font-size: 13px;
+  }
+  
+  .preview {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 5px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding-bottom: 0;
+    padding: 40px;
+    margin-top: 0;
+  }
+  .preview h6 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .preview p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .preview button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+  
+  }
+  
+  
+ /* Define a class for the div */
+.custom-scrollbar {
+  overflow-y: scroll; /* Add a vertical scrollbar */
+  max-height: 32rem; /* Adjust the maximum height as needed */
+  scrollbar-width: thin; /* Show a thin scrollbar (on supported browsers) */
+  scrollbar-color: #555 #333; /* Define the scrollbar colors */
+  
+}
+
+/* Define the scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #555; /* Thumb color */
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #333; /* Thumb color on hover */
+}
+
+
+
+  
